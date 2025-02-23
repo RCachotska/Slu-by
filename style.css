@@ -1,0 +1,303 @@
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    margin: 0;
+    padding: 60px 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    background-color: #fafafa;
+    color: #8b8b8b;
+    line-height: 1.5;
+}
+
+.wrapper {
+    margin: 60px 20px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    margin: 60px 0px;
+}
+
+.hero-content-column {
+    text-align: center;
+}
+  
+
+h1,
+h2 {
+    color: black;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #407bff;
+    margin: 10px auto 0 auto;
+ }
+
+h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+
+p {
+    top: 469px;
+    left: 20px;
+    width: 460px;
+    height: 84px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+/* :not(:last-child) - Toto je pseudo-třída, která vybírá všechny elementy, 
+které nejsou posledním potomkem svého rodiče. 
+V tomto kontextu to znamená, že se vybere každý odkaz uvnitř .buttons kromě toho posledního. */
+
+.buttons .button:not(:last-child) {
+    margin-bottom: 10px;
+
+}
+
+.button {
+    padding: 11px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    border-radius: 20px;
+    text-decoration: none;
+ 
+}
+
+.button-primary {
+    background-color: #407bff; 
+    color: white;
+    
+ }
+ .button-secondary {
+     background-color: #8b8b8b; 
+     color: white;
+     
+  }
+ 
+  .button-secondary:hover {
+     background-color: #696969; 
+     
+  }
+
+  .boxes {
+    margin-top: 30px;
+  }
+
+
+
+.box {
+    font-size: 14px;
+    text-align: left;
+    background-color: white;
+    color: #8b8b8b;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0px 4px 6px white;
+    align-items: center;
+
+}
+
+.box:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+
+.box-icon {
+    flex: 0 0 50px;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.box-icon img {
+    width: auto;
+    height: 40px;
+}
+
+/*-----------------------------------------*/
+/* Tablet*/
+/*-----------------------------------------*/
+@media screen and (min-width: 540px) {
+    .hero-image-column {
+      display: flex;
+      justify-content: center; /* Horizontální vycentrování */
+    }
+
+
+section {
+    margin: 80px 0;
+}
+
+.hero-image {
+    max-width: 400px;
+}    
+
+.buttons {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buttons .button:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 20px;
+
+}
+.boxes {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px; /* Mezera mezi boxy */
+}
+.box {
+    flex: 1 1 calc((100% - 40px) /3);
+    display: block;
+    padding: 30px 20px;
+    text-align: center;
+   }
+
+   .box:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 20px;
+}
+.box-icon {
+    margin-right: 0;
+}
+
+}
+
+/*-----------------------------------------*/
+/* PC*/
+/*-----------------------------------------*/
+
+@media screen and (min-width: 1100px) {
+ h1,
+ h2,
+ p {
+    text-align: left;
+ }  
+ 
+h1 {
+margin-top: 0;
+}
+
+ h1::after {
+    margin-left: 0;
+ }
+
+    .wrapper {
+        max-width: 1040px;
+        margin: 60px auto;
+    }
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero-image-column,
+.hero-content-column {
+    flex: 0 0 calc((100% - 60px) / 2);
+}
+
+.hero-content-column {
+    order: 1;
+}
+.hero-image-column {
+    order: 2;
+}
+
+.buttons {
+    justify-content: flex-start;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.services-text {
+    flex: 0 0 430px;
+}
+
+
+.boxes {
+    flex: 0 0 550px;
+    margin-top: 0;
+    align-items: center; 
+    padding: 30px 20px;
+
+  
+}
+
+
+.box {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 30px 20px;
+  }
+
+.box p {
+text-align: center;
+flex-grow: 1; 
+
+}
+
+.services-alt .services-text {
+    order: 2;
+}
+
+.services-alt .boxes {
+    order: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
